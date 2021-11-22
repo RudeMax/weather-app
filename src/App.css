@@ -1,5 +1,14 @@
 .App {
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
 }
 
 .App-logo {
@@ -14,7 +23,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +37,39 @@
   color: #61dafb;
 }
 
+.application-body {
+  border: solid 1px black;
+  border-radius: 5px;
+  height: 90vh;
+  width: 55vh;
+  background-image: url(./appBackground1.webp);
+  background-size: cover;
+}
+
+.application-main {
+  height: 90vh;
+  width: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.error {
+  font-size: 12px;
+  text-align: start;
+  margin: 5px 2px;
+  color: #f57c00;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    animation: App-logo-spin infinite 30s linear;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +77,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.city-select p {
+  font-size: 15px;
+  color: #666;
+  text-align: start;
+  margin-left: 5px;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: #888 0px 2px 3px;
+}
+
+.weather-card {
+  vertical-align: bottom;
+  color: rgb(209, 202, 202);
+  padding-bottom: 10px;
+}
+
+.weather-card-top {
+  display: flex;
+  justify-content: space-between;
+  max-height: 200px;
+}
+
+.weather-card-top-left {
+  font-size: 100px;
+  margin: auto;
+  padding-left: 30px;
+  max-height: 200px;
+}
+
+.weather-card-top-right {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: start;
+  margin: 0 auto;
+}
+
+.weather-card-top-right span {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.nodata {
+  color: white;
+}
+
+.weather-icon {
+  width: 50px;
+}
+
+.weather-description {
+  font-size: 15px;
+}
+
+.weather-card-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
